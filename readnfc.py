@@ -1,10 +1,16 @@
+import sys
+import os
 import time
 import nfc
 import requests
 import uuid
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(project_root)
+
 import appsettings #you shouldnt need to edit this file
 import usersettings #this is the file you might need to edit
-import sys
+
 
 # this function gets called when a NFC tag is detected
 def touched(tag):
